@@ -1,0 +1,16 @@
+﻿@{
+	ViewData["Title"] = "Upload";
+	Layout = "_Layout";
+}
+
+<a class="homeButton" href="/">Home</a>
+
+<label for="file" class="file-upload" id="dropContainer" />
+
+<div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+	<h1 class="rainbow">Just drag'n'drop some file here or press somewhere here to choose file<br />(not more than 6MB)</h1>
+</div>
+
+<input id="file" type="file" name="file" onchange="fileValidation()"/>
+
+<script src="/js/upload.js"></script>

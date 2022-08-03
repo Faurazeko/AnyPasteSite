@@ -1,0 +1,36 @@
+﻿@{
+	ViewData["Title"] = "Show";
+	Layout = "_Layout";
+}
+@model ShowFileViewModel;
+
+<div class="cursorToolTip" id="copiedAlert">Link copied to clipboard!</div>
+
+<a class="homeButton" href="/">Home</a>
+
+<div style="position: fixed; height: 100%; width:40vh; white-space:pre-line;">
+		<div style="text-align: center;" id="spaceAfterElems">
+			<button class="coolBtn my-2" onclick="location.href='/home/Upload'">Upload another file</button>
+			<button class="coolBtn my-2" id="downloadBtn">Click to download file</button>
+			<button class="coolBtn my-2" onclick="copyLink(event, this)" onmouseout="hideToolTip()" id="copyBtn">Copy download link</button>
+			<button class="coolBtn my-2" onclick="copyLink(event, this)" onmouseout="hideToolTip()" id="directBtn">Copy direct link</button>
+			@if (Model.IsOwner)
+			{
+				<button class="coolBtn my-2" style="white-space:normal;" onclick="deleteFile('@Model.FileName')">
+					<span style="font-size:0.8rem;">As an owner you can..</span><br />
+					<strong>Delete this file</strong>
+				</button>
+			}
+		</div>
+</div>
+
+<div style="
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: black;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);"
+id="fileContent"/>
+
+<script src="/js/show.js"></script>

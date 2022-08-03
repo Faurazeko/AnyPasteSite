@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0%;
+    margin: 0;
+    background-color: #1C1B29;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: #6052fb;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+    margin: 0;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-upload {
+    cursor: pointer;
+    vertical-align: central;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.rainbow {
+    -webkit-animation: rainbow 6s infinite;
+    animation: rainbow 6s infinite
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        color: orange
+    }
+
+    10% {
+        color: purple
+    }
+
+    20% {
+        color: red
+    }
+
+    30% {
+        color: #5f9ea0
+    }
+
+    40% {
+        color: #ff0
+    }
+
+    50% {
+        color: coral
+    }
+
+    60% {
+        color: green
+    }
+
+    70% {
+        color: #0ff
+    }
+
+    80% {
+        color: #ff1493
+    }
+
+    90% {
+        color: #1e90ff
+    }
+
+    100% {
+        color: orange
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        color: orange
+    }
+
+    10% {
+        color: purple
+    }
+
+    20% {
+        color: red
+    }
+
+    30% {
+        color: #5f9ea0
+    }
+
+    40% {
+        color: #ff0
+    }
+
+    50% {
+        color: coral
+    }
+
+    60% {
+        color: green
+    }
+
+    70% {
+        color: #0ff
+    }
+
+    80% {
+        color: #ff1493
+    }
+
+    90% {
+        color: #1e90ff
+    }
+
+    100% {
+        color: orange
+    }
+}
+
+
+pre {
+    background-color: #39394b;
+    border: 1px solid #39394b;
+    border-left: 3px solid #6052fb;
+    color: lightgray;
+    page-break-inside: avoid;
+    font: normal normal 14px/16px "Courier New", Courier, Monospace;
+    line-height: 1.0;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    padding: .5em 1em;
+    display: block;
+    word-wrap: break-word;
+    margin-left: 100px;
+    margin-right: 100px;
+    overflow: auto;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    counter-reset: line;
+    position: relative;
+}
+
+    pre:hover,
+    pre:focus {
+        border-left: 3px solid red;
+    }
+
+.code {
+    position: relative;
+}
+
+.coolBtn {
+    border: 0px solid;
+    border-radius: 5px;
+    background-color: #6052fb;
+    color: white;
+    cursor: pointer;
+    padding: 7px;
+    font-family: 'Montserrat', sans-serif;
+    width: 50%;
+}
+
+.cursorToolTip {
+    position: absolute;
+    display: none;
+    z-index: 999999;
+    padding: 10px;
+    color: #D3D3D3;
+    background: #39394b;
+    border: 3px solid #6052fb;
+    border-radius: 5px;
+}
+
+.homeButton {
+    position: fixed;
+    z-index: 99999;
+    font-size: 30px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
